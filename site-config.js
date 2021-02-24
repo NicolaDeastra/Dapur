@@ -1,3 +1,6 @@
+const description =
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt porta neque, ac ornare justo Aliquam tincidunt porta neque.'
+
 const year = new Date().getFullYear()
 
 const footer = {
@@ -16,7 +19,7 @@ const footer = {
     {
       heading: 'About Us',
       routes: [
-        ['About Berita.id', '/about'],
+        ['About Mamang', '/about'],
         ['Contact us', '/contact'],
         ['features', '/features'],
         ['Careers', '/careers'],
@@ -37,4 +40,6 @@ const footer = {
 module.exports = {
   title: 'Mamang',
   footer,
+  heading: 'Free open source website provides manga in Bahasa',
+  subHeading: description,
 }

@@ -1,18 +1,30 @@
-import Head from 'next/head'
+import { Heading } from '@chakra-ui/react'
 
 import Layout from '@/Components/Layout'
+import Hero from '@/Components/Hero'
+import LatestManga from '@/Components/LatestManga'
 
-export default function Home() {
+import Api from '@/lib/api'
+
+export async function getStaticProps(context) {
+  const manga = await Api.getLatestManga()
+  return {
+    props: {
+      manga,
+    },
+  }
+}
+
+export default function Home({ manga }) {
   return (
     <Layout>
-      <Head>
-        <title>Mamang - Free open source manga sub indo website</title>
-      </Head>
-      <div>
-        <p className='font-serif text-8xl  font-extrabold text-black'>
-          Hallo word
-        </p>
-      </div>
+      <Heading>
+        <title>
+          Mamang - Free open source website provides manga in Bahasa
+        </title>
+      </Heading>
+      <Hero />
+      <LatestManga LatestManga={manga} />
     </Layout>
   )
 }
