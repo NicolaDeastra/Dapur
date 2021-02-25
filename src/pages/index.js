@@ -2,20 +2,22 @@ import { Heading } from '@chakra-ui/react'
 
 import Layout from '@/Components/Layout'
 import Hero from '@/Components/Hero'
-import LatestManga from '@/Components/LatestManga'
+import MangaGrid from '@/Components/MangaGrid'
 
 import Api from '@/lib/api'
 
 export async function getStaticProps(context) {
-  const manga = await Api.getLatestManga()
+  const latestManga = await Api.getLatestManga()
+  const popularManga = await Api.getPopularManga()
   return {
     props: {
-      manga,
+      latestManga,
+      popularManga,
     },
   }
 }
 
-export default function Home({ manga }) {
+export default function Home({ latestManga, popularManga }) {
   return (
     <Layout>
       <Heading>
@@ -24,7 +26,8 @@ export default function Home({ manga }) {
         </title>
       </Heading>
       <Hero />
-      <LatestManga LatestManga={manga} />
+      <MangaGrid type='Popular Manga' comics={popularManga} />
+      <MangaGrid type='Latest Manga' comics={latestManga} />
     </Layout>
   )
 }

@@ -19,7 +19,7 @@ const Hero = () => {
         <Text fontSize={{ base: 'sm', md: 'md' }} textAlign='center'>
           {siteConfig.subHeading}
         </Text>
-        <Button size='lg' ml={['4.5rem', '0']} mt='30px' variant='primary'>
+        <Button size='lg' ml={['4.5rem', '0']} mt='45px' variant='primary'>
           Get Started
         </Button>
       </VStack>

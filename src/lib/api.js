@@ -12,6 +12,16 @@ class Api {
       return error
     }
   }
+
+  static getPopularManga = async () => {
+    try {
+      const res = await axios.get(`${baseUrl}/manga/popular/1`)
+
+      return await res.data.manga_list
+    } catch (error) {
+      return error
+    }
+  }
 }
 
 export default Api
