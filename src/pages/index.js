@@ -6,9 +6,10 @@ import MangaGrid from '@/Components/MangaGrid'
 
 import Api from '@/lib/api'
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const latestManga = await Api.getLatestManga()
   const popularManga = await Api.getPopularManga()
+
   return {
     props: {
       latestManga,

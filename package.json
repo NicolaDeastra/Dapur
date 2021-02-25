@@ -13,19 +13,9 @@
     "@emotion/styled": "^11.1.5",
     "axios": "^0.21.1",
     "framer-motion": "^3.6.7",
-    "next": "10.0.7",
+    "next": "10.0.4",
     "react": "17.0.1",
     "react-dom": "17.0.1"
   },
-  "devDependencies": {},
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "prettier --write"
-    ]
-  }
+  "devDependencies": {}
 }
