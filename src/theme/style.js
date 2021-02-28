@@ -2,7 +2,7 @@ const styles = {
   global: {
     body: {
       bg: '#fff',
-      color: '#162127',
+      color: '#333333',
     },
   },
 }

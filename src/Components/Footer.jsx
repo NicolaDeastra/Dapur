@@ -1,5 +1,6 @@
 import * as React from 'react'
-import { VStack, Link, Flex, Heading, Text } from '@chakra-ui/react'
+import { VStack, HStack, Link, Flex, Heading, Text } from '@chakra-ui/react'
+import { GiMustache } from 'react-icons/gi'
 import NextLink from 'next/link'
 
 import siteConfig from 'site-config'
@@ -10,7 +11,7 @@ const Footer = () => {
       w='100%'
       justify='space-between'
       direction={['column-reverse', 'row']}
-      align={['center', 'normal']}
+      align='normal'
       py={4}
       pr={['2rem', '4rem']}
       pl={['2rem', '5.2rem']}
@@ -20,11 +21,16 @@ const Footer = () => {
         h={['5rem', '11rem']}
         flexGrow={1}
         direction='column'
-        alignItems={['center', 'flex-start']}
+        alignItems='flex-start'
       >
         <NextLink href='/'>
-          <Link fontWeight='extrabold' fontSize='lg' variant='link'>
-            {siteConfig.title}
+          <Link fontWeight='extrabold' fontSize='xl' variant='link'>
+            <HStack>
+              <GiMustache size='1.5em' color='#30a0e8' />
+              <Link fontWeight='extrabold' fontSize='xl' variant='link'>
+                {siteConfig.title}
+              </Link>
+            </HStack>
           </Link>
         </NextLink>
         <Text> &copy; {siteConfig.footer.copyright}</Text>
@@ -36,12 +42,14 @@ const Footer = () => {
           flexGrow={1}
           direction='column'
           mb={['4rem', 0]}
-          alignItems={['center', 'flex-start']}
+          alignItems='flex-start'
         >
           <Heading fontSize='lg'>{route.heading}</Heading>
           {route.routes.map(([text, href]) => (
             <NextLink key={text} href={href}>
-              <Link p={0}>{text}</Link>
+              <Link p={0} color='secondary.600'>
+                {text}
+              </Link>
             </NextLink>
           ))}
         </VStack>

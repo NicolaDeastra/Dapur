@@ -12,7 +12,7 @@ export default class MyDocument extends NextDocument {
         <Head>
           <link rel='preconnect' href='https://fonts.gstatic.com' />
           <link
-            href='https://fonts.googleapis.com/css2?family=Lora&family=Oswald&family=Playfair+Display:wght@300;400;800&display=swap'
+            href='https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap'
             rel='stylesheet'
           />
         </Head>

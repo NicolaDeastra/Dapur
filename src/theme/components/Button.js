@@ -1,7 +1,7 @@
 const Button = {
   variants: {
     primary: {
-      bg: '#33D3DC',
+      bg: 'primary.400',
       color: '#fff',
       fontFamily: 'mono',
     },

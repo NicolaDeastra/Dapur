@@ -1,5 +1,5 @@
 const description =
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt porta neque, ac ornare justo Aliquam tincidunt porta neque.'
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt porta neque.'
 
 const year = new Date().getFullYear()
 
@@ -40,6 +40,6 @@ const footer = {
 module.exports = {
   title: 'Mamang',
   footer,
-  heading: 'Free open source website provides manga in Bahasa',
+  heading: 'Open source manga website',
   subHeading: description,
 }
