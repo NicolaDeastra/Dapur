@@ -15,7 +15,7 @@ const Footer = () => {
       bg='#E0E0E0'
       py={8}
       pr={['2rem', '4rem']}
-      pl={['2rem', '5.2rem']}
+      pl={['2rem', '6rem']}
     >
       <Flex
         justify='space-between'

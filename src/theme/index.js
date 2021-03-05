@@ -1,6 +1,8 @@
 import { extendTheme, theme } from '@chakra-ui/react'
 
 import styles from './style'
+
+import Box from './components/Box'
 import Link from './components/Link'
 import Button from './components/Button'
 
@@ -16,6 +18,7 @@ const overrides = {
   components: {
     Link,
     Button,
+    Box,
   },
   colors: {
     primary: {
