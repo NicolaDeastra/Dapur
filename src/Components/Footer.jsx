@@ -11,8 +11,9 @@ const Footer = () => {
       w='100%'
       justify='space-between'
       direction={['column-reverse', 'row']}
-      align='normal'
-      py={4}
+      align={['center', 'normal']}
+      bg='#E0E0E0'
+      py={8}
       pr={['2rem', '4rem']}
       pl={['2rem', '5.2rem']}
     >
@@ -21,7 +22,7 @@ const Footer = () => {
         h={['5rem', '11rem']}
         flexGrow={1}
         direction='column'
-        alignItems='flex-start'
+        alignItems={['center', 'flex-start']}
       >
         <NextLink href='/'>
           <Link fontWeight='extrabold' fontSize='xl' variant='link'>
@@ -33,8 +34,9 @@ const Footer = () => {
             </HStack>
           </Link>
         </NextLink>
-        <Text> &copy; {siteConfig.footer.copyright}</Text>
+        <Text color='secondary.600'> &copy; {siteConfig.footer.copyright}</Text>
       </Flex>
+
       {siteConfig.footer.rotes.map((route) => (
         <VStack
           key={route.heading}
@@ -42,7 +44,7 @@ const Footer = () => {
           flexGrow={1}
           direction='column'
           mb={['4rem', 0]}
-          alignItems='flex-start'
+          alignItems={['center', 'flex-start']}
         >
           <Heading fontSize='lg'>{route.heading}</Heading>
           {route.routes.map(([text, href]) => (

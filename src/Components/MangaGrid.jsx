@@ -7,11 +7,11 @@ const MangaGrid = ({ type, comics }) => {
   return (
     <Flex
       pr={['2rem', 0]}
-      pl={['2rem', '4rem']}
+      pl={['0.3rem', '4rem']}
       direction='column'
-      mb={[0, '3rem']}
+      mb={['4rem', '4.5rem']}
     >
-      <Heading as='h3' size='md' alignContent='start' mb={[0, '2rem']}>
+      <Heading as='h3' size='md' alignContent='start' mb={['1rem', '2rem']}>
         {type}
       </Heading>
       <SimpleGrid columns={[1, 3]} spacing={10}>

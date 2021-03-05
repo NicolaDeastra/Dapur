@@ -3,7 +3,6 @@ const Button = {
     primary: {
       bg: 'primary.400',
       color: '#fff',
-      fontFamily: 'mono',
     },
   },
 }
