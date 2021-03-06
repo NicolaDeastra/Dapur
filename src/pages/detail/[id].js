@@ -38,7 +38,24 @@ export default function Detail() {
   return (
     <Layout>
       <Head>
-        <title>{state.manga.title || 'Detail Manga'} - mamang</title>
+        <title>{state.manga.title || 'Detail Manga'} - Mamang</title>
+        <meta name='title' content={state.manga.title} />
+        <meta name='description' content={state.manga.synopsis} />
+
+        <meta property='og:type' content='website' />
+        <meta property='og:url' content='https://mamang.vercel.app/' />
+        <meta property='og:title' content={`${state.manga.title} - Mamang`} />
+        <meta property='og:description' content={state.manga.synopsis} />
+        <meta property='og:image' content={state.manga.thumb} />
+
+        <meta property='twitter:card' content='summary_large_image' />
+        <meta property='twitter:url' content='https://mamang.vercel.app/' />
+        <meta
+          property='twitter:title'
+          content={`${state.manga.title} - Mamang`}
+        />
+        <meta property='twitter:description' content={state.manga.synopsis} />
+        <meta property='twitter:image' content={state.manga.thumb} />
       </Head>
       {state.loading === true ? (
         <Box padding='6' boxShadow='lg' bg='#F9F9F9 '>

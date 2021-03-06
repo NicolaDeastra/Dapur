@@ -14,7 +14,7 @@ const MangaGrid = ({ type, comics }) => {
       <Heading as='h3' size='md' alignContent='start' mb={['1rem', '2rem']}>
         {type}
       </Heading>
-      <SimpleGrid columns={[1, 3]} spacing={10}>
+      <SimpleGrid columns={[1, 3]}>
         {comics
           ? comics
               .slice(0, 6)

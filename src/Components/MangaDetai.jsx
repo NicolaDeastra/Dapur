@@ -1,18 +1,38 @@
-import { Box, Image, Flex, List, ListItem } from '@chakra-ui/react'
+import {
+  Box,
+  Image,
+  SimpleGrid,
+  List,
+  ListItem,
+  Heading,
+} from '@chakra-ui/react'
 
 const MangaDetail = ({ manga }) => {
   return (
-    <Flex>
-      <Image src={manga.thumb} boxSize='200px' alt={manga.title} />
+    <SimpleGrid px={'18rem'} columns={2} spacing={6}>
+      <Box>
+        <Image
+          src={manga.thumb}
+          boxSize={['150px', '200px']}
+          alt={manga.title}
+        />
+      </Box>
+
       <Box>
         <List>
-          <ListItem>{manga.title}</ListItem>
-          <ListItem>{manga.type}</ListItem>
+          <ListItem>
+            <Heading size='md'>{manga.title}</Heading>
+          </ListItem>
+          <ListItem>
+            <Heading size='sm' color='secondary.600'>
+              {manga.type}
+            </Heading>
+          </ListItem>
           <ListItem>{manga.author}</ListItem>
           <ListItem>{manga.status}</ListItem>
         </List>
       </Box>
-    </Flex>
+    </SimpleGrid>
   )
 }
 
