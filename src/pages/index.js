@@ -1,4 +1,4 @@
-import { Heading } from '@chakra-ui/react'
+import Head from 'next/head'
 
 import Layout from '@/Components/Layout'
 import Hero from '@/Components/Hero'
@@ -22,11 +22,19 @@ export async function getStaticProps(context) {
 export default function Home({ latestManga, popularManga }) {
   return (
     <Layout>
-      <Heading>
+      <Head>
         <title>
-          Mamang - Free open source website provides manga in Bahasa
+          Free open source website provides manga in Bahasa - Mamang
         </title>
-      </Heading>
+        <meta
+          name='title'
+          content='Free open source website provides manga in Bahasa - Mamang'
+        />
+        <meta
+          name='description'
+          content='Free open source website provides manga in Bahasa'
+        />
+      </Head>
       <Hero />
       <MangaGrid type='Popular Manga' comics={popularManga} />
       <MangaGrid type='Latest Manga' comics={latestManga} />

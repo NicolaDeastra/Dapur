@@ -22,6 +22,16 @@ class Api {
       return error
     }
   }
+
+  static getMangaDetail = async (id) => {
+    try {
+      const res = await axios.get(`${baseUrl}/manga/detail/${id}`)
+
+      return await res.data
+    } catch (error) {
+      return error
+    }
+  }
 }
 
 export default Api

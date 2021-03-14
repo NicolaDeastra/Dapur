@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { SimpleGrid, Heading, Flex, Spacer } from '@chakra-ui/react'
+import { SimpleGrid, Heading, Flex } from '@chakra-ui/react'
 
 import Card from '@/Components/Card'
 
@@ -14,7 +14,7 @@ const MangaGrid = ({ type, comics }) => {
       <Heading as='h3' size='md' alignContent='start' mb={['1rem', '2rem']}>
         {type}
       </Heading>
-      <SimpleGrid columns={[1, 3]} spacing={10}>
+      <SimpleGrid columns={[1, 3]}>
         {comics
           ? comics
               .slice(0, 6)
@@ -25,6 +25,7 @@ const MangaGrid = ({ type, comics }) => {
                   thumb={comic.thumb}
                   type={comic.type}
                   chapter={comic.chapter}
+                  endpoint={comic.endpoint}
                   updated_on={comic.updated_on}
                   upload_on={comic.upload_on}
                 />
