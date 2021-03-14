@@ -29,7 +29,9 @@ const Nav = () => {
           {isDestop
             ? routes.map(([text, href]) => (
                 <NextLink key={text} href={href}>
-                  <Link p={4}>{text}</Link>
+                  <Link p={4} color='secondary.600'>
+                    {text}
+                  </Link>
                 </NextLink>
               ))
             : null}
