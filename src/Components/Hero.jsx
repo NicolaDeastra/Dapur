@@ -17,7 +17,7 @@ const Hero = () => {
           {siteConfig.heading}
         </Heading>
 
-        <Text fontSize={['lg', 'xl']} textAlign='center' color='secondary.600'>
+        <Text fontSize={['lg', 'xl']} textAlign='center' color='gray.600'>
           {siteConfig.subHeading}
         </Text>
         <Button size='lg' ml={['4.5rem', '0']} mt='45px' variant='primary'>

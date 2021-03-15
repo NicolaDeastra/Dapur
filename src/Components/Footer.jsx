@@ -1,6 +1,14 @@
 import * as React from 'react'
-import { VStack, HStack, Link, Flex, Heading, Text } from '@chakra-ui/react'
-import { GiMustache } from 'react-icons/gi'
+import {
+  VStack,
+  HStack,
+  Link,
+  Flex,
+  Heading,
+  Text,
+  Icon,
+} from '@chakra-ui/react'
+import { GiCookingPot } from 'react-icons/gi'
 import NextLink from 'next/link'
 
 import siteConfig from 'site-config'
@@ -12,7 +20,7 @@ const Footer = () => {
       justify='space-between'
       direction={['column-reverse', 'row']}
       align={['center', 'normal']}
-      bg='#E0E0E0'
+      bg='white'
       py={8}
       pr={['2rem', '4rem']}
       pl={['2rem', '6rem']}
@@ -27,14 +35,14 @@ const Footer = () => {
         <NextLink href='/'>
           <Link fontWeight='extrabold' fontSize='xl' variant='link'>
             <HStack>
-              <GiMustache size='1.5em' color='#30a0e8' />
+              <Icon as={GiCookingPot} w={8} h={8} color='primary.600' />
               <Link fontWeight='extrabold' fontSize='xl' variant='link'>
                 {siteConfig.title}
               </Link>
             </HStack>
           </Link>
         </NextLink>
-        <Text color='secondary.600'> &copy; {siteConfig.footer.copyright}</Text>
+        <Text color='gray.600'> &copy; {siteConfig.footer.copyright}</Text>
       </Flex>
 
       {siteConfig.footer.rotes.map((route) => (
@@ -49,7 +57,7 @@ const Footer = () => {
           <Heading fontSize='lg'>{route.heading}</Heading>
           {route.routes.map(([text, href]) => (
             <NextLink key={text} href={href}>
-              <Link p={0} color='secondary.600'>
+              <Link p={0} color='gray.600'>
                 {text}
               </Link>
             </NextLink>

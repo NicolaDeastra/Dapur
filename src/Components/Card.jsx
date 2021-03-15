@@ -1,16 +1,8 @@
 import * as React from 'react'
 import NextLink from 'next/link'
-import { Box, Image, Flex, Badge, Text } from '@chakra-ui/react'
+import { Box, Image, Badge } from '@chakra-ui/react'
 
-const Card = ({
-  title,
-  thumb,
-  type,
-  chapter,
-  endpoint,
-  updated_on,
-  upload_on,
-}) => {
+const Card = ({ title, thumb, portion, times, dificulty, endpoint, tags }) => {
   return (
     <NextLink href={`/detail/${endpoint}`}>
       <Box
@@ -18,8 +10,6 @@ const Card = ({
         cursor='pointer'
         bg='#fff'
         borderWidth='1px'
-        borderRadius='lg'
-        boxShadow='lg'
         overflow='hidden'
         mb={['2rem', '4rem']}
       >
@@ -28,7 +18,7 @@ const Card = ({
         <Box p='6'>
           <Box d='flex' alignItems='baseline'>
             <Badge borderRadius='full' px='2' colorScheme='primary'>
-              {chapter ? chapter : type}
+              {portion}
             </Badge>
           </Box>
 
@@ -42,8 +32,8 @@ const Card = ({
             {title}
           </Box>
 
-          <Box color='secondary.600'>
-            {updated_on ? `Update ${updated_on} lalu ` : upload_on}
+          <Box color='gray.600'>
+            {tags ? tags : `${dificulty} sekitar ${times}`}
           </Box>
         </Box>
       </Box>

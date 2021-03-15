@@ -2,24 +2,21 @@ import Head from 'next/head'
 
 import Layout from '@/Components/Layout'
 import Hero from '@/Components/Hero'
-import MangaGrid from '@/Components/MangaGrid'
+import RecipeGrid from '@/Components/RecipeGrid'
 
 import Api from '@/lib/api'
 
 export async function getStaticProps(context) {
-  const latestManga = await Api.getLatestManga()
-  const popularManga = await Api.getPopularManga()
+  const newRecipe = await Api.getNewRecipe()
+  const article = await Api.getTipsMasak()
 
   return {
-    props: {
-      latestManga,
-      popularManga,
-    },
+    props: { newRecipe, article },
     revalidate: 300,
   }
 }
 
-export default function Home({ latestManga, popularManga }) {
+export default function Home({ newRecipe, article }) {
   return (
     <Layout>
       <Head>
@@ -36,8 +33,8 @@ export default function Home({ latestManga, popularManga }) {
         />
       </Head>
       <Hero />
-      <MangaGrid type='Popular Manga' comics={popularManga} />
-      <MangaGrid type='Latest Manga' comics={latestManga} />
+      <RecipeGrid recipes={newRecipe.results} bg='bg.100' />
+      <RecipeGrid recipes={article.results} bg='bg.200' />
     </Layout>
   )
 }

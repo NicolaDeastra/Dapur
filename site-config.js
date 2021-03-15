@@ -38,7 +38,7 @@ const footer = {
 }
 
 module.exports = {
-  title: 'Mamang',
+  title: 'Dapur',
   footer,
   heading: 'Open source manga website',
   subHeading: description,

@@ -3,29 +3,19 @@ import axios from 'axios'
 const baseUrl = process.env.NEXT_PUBLIC_API_URL
 
 class Api {
-  static getLatestManga = async () => {
+  static getNewRecipe = async () => {
     try {
-      const res = await axios.get(`${baseUrl}/manga/page/1`)
+      const res = await axios.get(`${baseUrl}/recipes-length/?limit=9`)
 
-      return await res.data.manga_list
+      return await res.data
     } catch (error) {
       return error
     }
   }
 
-  static getPopularManga = async () => {
+  static getTipsMasak = async () => {
     try {
-      const res = await axios.get(`${baseUrl}/manga/popular/1`)
-
-      return await res.data.manga_list
-    } catch (error) {
-      return error
-    }
-  }
-
-  static getMangaDetail = async (id) => {
-    try {
-      const res = await axios.get(`${baseUrl}/manga/detail/${id}`)
+      const res = await axios.get(`${baseUrl}/categorys/article/tips-masak`)
 
       return await res.data
     } catch (error) {

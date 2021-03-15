@@ -1,7 +1,7 @@
 import * as React from 'react'
-import { HStack, Link, Divider, useMediaQuery } from '@chakra-ui/react'
+import { HStack, Link, Divider, useMediaQuery, Icon } from '@chakra-ui/react'
 import NextLink from 'next/link'
-import { GiMustache } from 'react-icons/gi'
+import { GiCookingPot } from 'react-icons/gi'
 
 import routes from '@/routes'
 import siteConfig from 'site-config'
@@ -16,7 +16,7 @@ const Nav = () => {
           <NextLink href='/'>
             <Link fontWeight='extrabold' fontSize='xl' variant='link'>
               <HStack>
-                <GiMustache size='1.5em' color='#30a0e8' />
+                <Icon as={GiCookingPot} w={8} h={8} color='primary.600' />
                 <Link fontWeight='extrabold' fontSize='xl' variant='link'>
                   {siteConfig.title}
                 </Link>
@@ -29,7 +29,7 @@ const Nav = () => {
           {isDestop
             ? routes.map(([text, href]) => (
                 <NextLink key={text} href={href}>
-                  <Link p={4} color='secondary.600'>
+                  <Link p={4} color='gray.600'>
                     {text}
                   </Link>
                 </NextLink>

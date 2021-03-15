@@ -7,7 +7,7 @@ export default function Layout({ children }) {
   return (
     <>
       <Nav />
-      <Container maxW='container.xl'>{children}</Container>
+      {children}
       <Footer />
     </>
   )
