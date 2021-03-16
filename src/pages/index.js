@@ -33,8 +33,8 @@ export default function Home({ newRecipe, article }) {
         />
       </Head>
       <Hero />
-      <RecipeGrid recipes={newRecipe.results} bg='bg.100' />
-      <RecipeGrid recipes={article.results} bg='bg.200' />
+      <RecipeGrid title='Recipes' recipes={newRecipe.results} />
+      <RecipeGrid title='Articles' recipes={article.results} />
     </Layout>
   )
 }

@@ -132,6 +132,11 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
+"@badrap/bar-of-progress@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@badrap/bar-of-progress/-/bar-of-progress-0.1.2.tgz#5d9cf85759e1f77bddcb74398530976d87bb5077"
+  integrity sha512-bCwx/HbgUfJEndzlubJF5FVQrFEcGX4HZsoCfoa+gSq37pjbJBvIyqMBLIGnb5y0ICovIrxJUxvlbmxeic0rSQ==
+
 "@chakra-ui/accordion@1.1.2":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@chakra-ui/accordion/-/accordion-1.1.2.tgz#b45a44746276100601a39f88e3a5e150a2232294"

@@ -9,7 +9,17 @@ class Api {
 
       return await res.data
     } catch (error) {
-      return error
+      return JSON.parse(error)
+    }
+  }
+
+  static getDetailRecipe = async (key) => {
+    try {
+      const res = await axios.get(`${baseUrl}/recipe/${key}`)
+
+      return await res.data
+    } catch (error) {
+      return JSON.parse(error)
     }
   }
 
@@ -19,7 +29,7 @@ class Api {
 
       return await res.data
     } catch (error) {
-      return error
+      return JSON.parse(error)
     }
   }
 }

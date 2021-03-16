@@ -1,5 +1,5 @@
 const description =
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt porta neque.'
+  'Want to learn cook but confused how to start ? No need worry again!'
 
 const year = new Date().getFullYear()
 
@@ -19,7 +19,7 @@ const footer = {
     {
       heading: 'About Us',
       routes: [
-        ['About Mamang', '/about'],
+        ['About Dapur', '/about'],
         ['Contact us', '/contact'],
         ['features', '/features'],
         ['Careers', '/careers'],
@@ -40,6 +40,6 @@ const footer = {
 module.exports = {
   title: 'Dapur',
   footer,
-  heading: 'Open source manga website',
+  heading: "Let's Start Cooking with Popular Recipe",
   subHeading: description,
 }

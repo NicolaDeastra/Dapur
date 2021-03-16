@@ -11,7 +11,7 @@ const Nav = () => {
 
   return (
     <>
-      <HStack py={4} pr={['1rem', '6.8rem']} pl={['1rem', '6rem']} spacing={12}>
+      <HStack py={4} pr={['1rem', '2rem']} pl={['1rem', '2rem']} spacing={12}>
         <HStack fontSize='md' flexGrow={1}>
           <NextLink href='/'>
             <Link fontWeight='extrabold' fontSize='xl' variant='link'>

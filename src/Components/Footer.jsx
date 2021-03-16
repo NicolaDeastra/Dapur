@@ -20,10 +20,10 @@ const Footer = () => {
       justify='space-between'
       direction={['column-reverse', 'row']}
       align={['center', 'normal']}
-      bg='white'
+      bg='footer.100'
       py={8}
-      pr={['2rem', '4rem']}
-      pl={['2rem', '6rem']}
+      pr={['1rem', '2rem']}
+      pl={['1rem', '2rem']}
     >
       <Flex
         justify='space-between'
