@@ -1,4 +1,12 @@
-import { Heading, Text, Image, Stack, Center, Box } from '@chakra-ui/react'
+import {
+  Heading,
+  Text,
+  Image,
+  Stack,
+  Center,
+  HStack,
+  SimpleGrid,
+} from '@chakra-ui/react'
 import Head from 'next/head'
 
 import Api from '@/lib/api'
@@ -40,11 +48,51 @@ export default function Recipe({ recipe: { results } }) {
           {results.author.user} {`  `}
           {results.author.datePublished}
         </Center>
-        <Box>
-          <Text color='gray.600' fontSize='md'>
-            {results.desc}
-          </Text>
-        </Box>
+        <Stack spacing='4'>
+          {results.description.map((desc) => (
+            <Text fontSize='md'>{desc}</Text>
+          ))}
+        </Stack>
+        <Center>
+          <Heading size='md'>Bahan-bahan</Heading>
+        </Center>
+        <Stack spacing='4'>
+          <SimpleGrid columns={2} spacing='8'>
+            {results.ingredient.map((s, index) => {
+              let step = s.split(' ')
+              let number = step[0]
+              let text = step.slice(1).join(' ').toString()
+
+              return (
+                <HStack spacing='3' key={index}>
+                  <Heading size='md' color='primary.600'>
+                    {number}
+                  </Heading>
+                  <Text>{text}</Text>
+                </HStack>
+              )
+            })}
+          </SimpleGrid>
+        </Stack>
+        <Center>
+          <Heading size='md'>Cara Membuat</Heading>
+        </Center>
+        <Stack spacing='4'>
+          {results.step.map((s, index) => {
+            let step = s.split(' ')
+            let number = step[0]
+            let text = step.slice(1).join(' ').toString()
+
+            return (
+              <HStack spacing='3' key={index}>
+                <Heading size='md' color='primary.600'>
+                  {number}
+                </Heading>
+                <Text>{text}</Text>
+              </HStack>
+            )
+          })}
+        </Stack>
       </Stack>
     </Layout>
   )

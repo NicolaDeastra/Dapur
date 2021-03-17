@@ -5,8 +5,8 @@ import ProgressBar from '@badrap/bar-of-progress'
 import theme from '@/theme'
 
 const progress = new ProgressBar({
-  size: 2,
-  color: '#446f55',
+  size: 4,
+  color: '#578F6D',
   className: 'bar-of-progress',
   delay: 100,
 })
