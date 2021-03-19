@@ -20,16 +20,14 @@ export default function Home({ newRecipe, article }) {
   return (
     <Layout>
       <Head>
-        <title>
-          Free open source website provides manga in Bahasa - Mamang
-        </title>
+        <title>Let's Start Cooking with Popular Recip - Dapur</title>
         <meta
           name='title'
-          content='Free open source website provides manga in Bahasa - Mamang'
+          content="Let's Start Cooking with Popular Recip - Dapur"
         />
         <meta
           name='description'
-          content='Free open source website provides manga in Bahasa'
+          content='Free open source website recipes in Bahasa'
         />
       </Head>
       <Hero />

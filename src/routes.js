@@ -1,6 +1,6 @@
 module.exports = [
   ['Home', '/'],
-  ['Chapter Baru', '/latest'],
-  ['Daftar Manga', '/manga'],
-  ['Kategori', '/category'],
+  ['Resep', '/resep'],
+  ['Article', '/article'],
+  ['Kategori', '/kategory'],
 ]

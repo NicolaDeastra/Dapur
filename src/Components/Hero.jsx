@@ -6,35 +6,46 @@ import siteConfig from 'site-config'
 const Hero = () => {
   return (
     <Flex
-      h='md'
+      h={['sm', 'md']}
       flexDirection={{ base: 'column', md: 'row' }}
-      px='2rem'
-      py='6rem'
-      mb={{ base: 20, md: '8rem' }}
+      px={['4', '2rem']}
+      py={['4rem', '6rem']}
+      mb={{ base: 0, md: '8rem' }}
       justifyContent='space-between'
     >
-      <Stack spacing={4} w='md' pt='6'>
-        <Heading size='xl' mb='0.4rem' fontWeight='bold'>
+      <Stack spacing={4} w={['xs', 'md']} pt={[0, '6']} mb={['6', 0]}>
+        <Heading
+          size={'lg'}
+          mb='0.4rem'
+          fontWeight='bold'
+          textAlign={['center', 'left']}
+        >
           {siteConfig.heading}
         </Heading>
 
-        <Text fontSize={['md', 'xl']} color='gray.600'>
+        <Text
+          fontSize={['sm', 'xl']}
+          textAlign={['center', 'left']}
+          color='gray.600'
+          mb={['0.8rem', '0.4rem']}
+        >
           {siteConfig.subHeading}
         </Text>
-        <Stack direction='row'>
+        <Stack direction='row' pl={['12', 0]}>
           <Button size='lg' variant='primary'>
-            Get Started
+            Recipe
           </Button>
           <Button size='lg' variant='secondary'>
-            Get Started
+            Article
           </Button>
         </Stack>
       </Stack>
       <Link
+        display={['none', 'block']}
         href='https://unsplash.com/@howardbouchevereau?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'
         isExternal
       >
-        <Img src='header.jpg' w='xl' />
+        <Img src='header.jpg' w={['lg', 'xl']} alt='hero image' />
       </Link>
     </Flex>
   )

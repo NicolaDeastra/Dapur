@@ -35,21 +35,21 @@ export default function article({ article: { results } }) {
         <title>{results.title} | dapur</title>
 
         <meta name='title' content={`${results.title} | dapur`} />
-        <meta name='description' content={results.content} />
+        <meta name='description' content={results.content[0]} />
 
         <meta property='og:type' content='website' />
         <meta property='og:url' content='https://dapur.varcel.app/' />
         <meta property='og:title' content={`${results.title} | dapur`} />
-        <meta property='og:description' content={results.content} />
+        <meta property='og:description' content={results.content[0]} />
         <meta property='og:image' content={results.thumb} />
 
         <meta property='twitter:card' content='summary_large_image' />
         <meta property='twitter:url' content='https://dapur.varcel.app/' />
         <meta property='twitter:title' content={`${results.title} | dapur`} />
-        <meta property='twitter:description' content={results.content} />
+        <meta property='twitter:description' content={results.content[0]} />
         <meta property='twitter:image' content={results.thumb}></meta>
       </Head>
-      <Stack px='16rem' my='8' spacing='8'>
+      <Stack px={['2', '16rem']} my='8' spacing='8'>
         <HStack color='gray.600'>
           <Breadcrumb>
             <BreadcrumbItem>

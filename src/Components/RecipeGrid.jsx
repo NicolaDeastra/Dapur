@@ -5,13 +5,7 @@ import Card from '@/Components/Card'
 
 const RecipeGrid = ({ recipes, title = 'Resep' }) => {
   return (
-    <Stack
-      pr={['2rem', 0]}
-      pl={['0.3rem', '2rem']}
-      py='6'
-      direction='column'
-      spacing='6'
-    >
+    <Stack pr={['1rem', 0]} pl='1rem' py='6' direction='column' spacing='6'>
       <Box>
         <Box
           maxW='3rem'

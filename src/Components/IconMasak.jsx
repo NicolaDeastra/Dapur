@@ -8,7 +8,7 @@ import {
 
 function IconMasak({ times, portion, dificulty }) {
   return (
-    <HStack spacing='4' color='gray.600' align='center'>
+    <HStack spacing={['1', '4']} color='gray.600' align='center'>
       <HStack>
         <Icon as={FaRegClock} />
         <Text>{times}</Text>
