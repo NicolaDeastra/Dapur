@@ -32,6 +32,16 @@ class Api {
       return JSON.parse(error)
     }
   }
+
+  static getDetailArticle = async (tag, endpoint) => {
+    try {
+      const res = await axios.get(`${baseUrl}/article/${tag}/${endpoint}`)
+
+      return await res.data
+    } catch (error) {
+      return JSON.parse(error)
+    }
+  }
 }
 
 export default Api

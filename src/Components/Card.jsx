@@ -10,9 +10,20 @@ import {
   FaMortarPestle,
 } from 'react-icons/fa'
 
-const Card = ({ title, thumb, portion, times, dificulty, endpoint, tags }) => {
+const Card = ({
+  title,
+  thumb,
+  portion,
+  times,
+  dificulty,
+  endpoint,
+  tags,
+  category,
+}) => {
   return (
-    <NextLink href={`/recipe/${endpoint}`}>
+    <NextLink
+      href={tags ? `/article/${tags}/${endpoint}` : `/recipe/${endpoint}`}
+    >
       <Box
         maxW='sm'
         border='1px'
@@ -44,7 +55,7 @@ const Card = ({ title, thumb, portion, times, dificulty, endpoint, tags }) => {
             ) : (
               <HStack>
                 <Icon as={FaLightbulb} />
-                <Text>{tags}</Text>
+                <Text>{category}</Text>
               </HStack>
             )}
           </Box>

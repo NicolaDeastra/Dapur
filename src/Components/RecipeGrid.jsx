@@ -36,6 +36,7 @@ const RecipeGrid = ({ recipes, title = 'Resep' }) => {
                 portion={recipe.portion}
                 dificulty={recipe.dificulty}
                 tags={recipe.tags}
+                category={recipe.category}
                 endpoint={recipe.key}
               />
             ))

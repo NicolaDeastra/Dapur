@@ -6,8 +6,12 @@ import {
   Center,
   HStack,
   SimpleGrid,
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
 } from '@chakra-ui/react'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 
 import Api from '@/lib/api'
 import Layout from '@/Components/Layout'
@@ -23,12 +27,45 @@ export async function getServerSideProps({ params: { key } }) {
 }
 
 export default function Recipe({ recipe: { results } }) {
+  const router = useRouter()
+  const { key } = router.query
+
   return (
     <Layout>
       <Head>
         <title>{results.title} | dapur</title>
+
+        <meta name='title' content={`${results.title} | dapur`} />
+        <meta name='description' content={results.description} />
+
+        <meta property='og:type' content='website' />
+        <meta property='og:url' content='https://dapur.varcel.app/' />
+        <meta property='og:title' content={`${results.title} | dapur`} />
+        <meta property='og:description' content={results.description} />
+        <meta property='og:image' content={results.thumb} />
+
+        <meta property='twitter:card' content='summary_large_image' />
+        <meta property='twitter:url' content='https://dapur.varcel.app/' />
+        <meta property='twitter:title' content={`${results.title} | dapur`} />
+        <meta property='twitter:description' content={results.description} />
+        <meta property='twitter:image' content={results.thumb}></meta>
       </Head>
       <Stack px='16rem' my='8' spacing='8'>
+        <HStack color='gray.600'>
+          <Breadcrumb>
+            <BreadcrumbItem>
+              <BreadcrumbLink href='/'>Home</BreadcrumbLink>
+            </BreadcrumbItem>
+
+            <BreadcrumbItem>
+              <BreadcrumbLink href='#'>Recipe</BreadcrumbLink>
+            </BreadcrumbItem>
+
+            <BreadcrumbItem isCurrentPage>
+              <BreadcrumbLink>{key}</BreadcrumbLink>
+            </BreadcrumbItem>
+          </Breadcrumb>
+        </HStack>
         <Heading size='lg' textAlign='center'>
           {results.title}
         </Heading>
@@ -49,9 +86,11 @@ export default function Recipe({ recipe: { results } }) {
           {results.author.datePublished}
         </Center>
         <Stack spacing='4'>
-          {results.description.map((desc) => (
-            <Text fontSize='md'>{desc}</Text>
-          ))}
+          {results.description
+            ? results.description.map((desc) => (
+                <Text fontSize='md'>{desc}</Text>
+              ))
+            : null}
         </Stack>
         <Center>
           <Heading size='md'>Bahan-bahan</Heading>
