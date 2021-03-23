@@ -10,6 +10,7 @@ import {
   BreadcrumbLink,
 } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 import Head from 'next/head'
 
 import Api from '@/lib/api'
@@ -53,7 +54,9 @@ export default function article({ article: { results } }) {
         <HStack color='gray.600'>
           <Breadcrumb>
             <BreadcrumbItem>
-              <BreadcrumbLink href='/'>Home</BreadcrumbLink>
+              <Link href='/'>
+                <BreadcrumbLink>Home</BreadcrumbLink>
+              </Link>
             </BreadcrumbItem>
 
             <BreadcrumbItem>

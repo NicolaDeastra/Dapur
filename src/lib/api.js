@@ -42,6 +42,16 @@ class Api {
       return JSON.parse(error)
     }
   }
+
+  static getRecipeByCategory = async (key) => {
+    try {
+      const res = await axios.get(`${baseUrl}/categorys/recipes/${key}`)
+
+      return await res.data
+    } catch (error) {
+      return JSON.parse(error)
+    }
+  }
 }
 
 export default Api

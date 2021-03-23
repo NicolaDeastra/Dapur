@@ -31,7 +31,7 @@ const Card = ({
         cursor='pointer'
         mb={['2rem', '1.5rem']}
       >
-        <Img src={thumb} alt={title} />
+        <Img src={thumb} alt={title} maxH='14.5rem' />
 
         <Box py='6' px='3'>
           <Box d='flex' alignItems='center' color='gray.600'>

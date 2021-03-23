@@ -1,6 +1,7 @@
 import Head from 'next/head'
 
 import Layout from '@/Components/Layout'
+import Category from '@/Components/Category'
 import Hero from '@/Components/Hero'
 import RecipeGrid from '@/Components/RecipeGrid'
 
@@ -31,6 +32,7 @@ export default function Home({ newRecipe, article }) {
         />
       </Head>
       <Hero />
+      <Category />
       <RecipeGrid title='Recipes' recipes={newRecipe.results} />
       <RecipeGrid title='Articles' recipes={article.results} />
     </Layout>
