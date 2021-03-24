@@ -33,23 +33,23 @@ const Card = ({
       >
         <Img src={thumb} alt={title} maxH='14.5rem' />
 
-        <Box py='6' px='3'>
+        <Box py='6' px={[0, '3']} pl={['1', 0]}>
           <Box d='flex' alignItems='center' color='gray.600'>
             {times && dificulty ? (
               <>
                 <HStack>
                   <Icon as={FaRegClock} />
-                  <Text>{times}</Text>
+                  <Text fontSize={['xs', 'sm']}>{times}</Text>
                 </HStack>
                 <HStack px='4'>
                   <Icon as={FaConciergeBell} />
-                  <Text>{portion}</Text>
+                  <Text fontSize={['xs', 'sm']}>{portion}</Text>
                 </HStack>
                 <HStack>
                   <Icon
                     as={dificulty === 'Mudah' ? FaThumbsUp : FaMortarPestle}
                   />
-                  <Text>{dificulty}</Text>
+                  <Text fontSize={['xs', 'sm']}>{dificulty}</Text>
                 </HStack>
               </>
             ) : (

@@ -13,7 +13,13 @@ function Category() {
   }
 
   return (
-    <Stack pr={['1rem', 0]} pl='1rem' py='6' direction='column' spacing='6'>
+    <Stack
+      pr={['1rem', 0]}
+      pl={['1rem', '2rem']}
+      py='6'
+      direction='column'
+      spacing='6'
+    >
       <Box>
         <Box
           maxW='3rem'
@@ -35,7 +41,6 @@ function Category() {
         mouseTracking
         autoPlay
         autoPlayInterval={1500}
-        paddingLeft={22}
       >
         {category.map((e) => (
           <CategoryCard
