@@ -42,12 +42,12 @@ function Category() {
         autoPlay
         autoPlayInterval={1500}
       >
-        {category.map((e) => (
+        {category?.map((item, index) => (
           <CategoryCard
-            type={e.key}
-            title={e.name}
-            thumb={e.thumb}
-            key={e.key}
+            type={item.key}
+            title={item.name}
+            thumb={item.thumb}
+            key={index}
           />
         ))}
       </AliceCarousel>

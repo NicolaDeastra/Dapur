@@ -13,7 +13,7 @@ export async function getStaticProps(context) {
 
   return {
     props: { newRecipe, article },
-    revalidate: 300,
+    revalidate: 60000,
   }
 }
 
@@ -34,7 +34,7 @@ export default function Home({ newRecipe, article }) {
       <Hero />
       <Category />
       <RecipeGrid title='Recipes' recipes={newRecipe.results} />
-      <RecipeGrid title='Articles' recipes={article.results} />
+      <RecipeGrid title='Articles' recipes={article.results.slice(0, 9)} />
     </Layout>
   )
 }

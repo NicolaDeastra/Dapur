@@ -27,13 +27,16 @@ const Card = ({
       <Box
         maxW='sm'
         border='1px'
-        borderColor='gray.200'
+        borderColor='gray.300'
         cursor='pointer'
         mb={['2rem', '1.5rem']}
+        _hover={{
+          boxShadow: 'lg',
+        }}
       >
         <Img src={thumb} alt={title} maxH='14.5rem' />
 
-        <Box py='6' px={[0, '3']} pl={['1', 0]}>
+        <Box py='6' pr={[0, '3']} pl={['1', '3']}>
           <Box d='flex' alignItems='center' color='gray.600'>
             {times && dificulty ? (
               <>

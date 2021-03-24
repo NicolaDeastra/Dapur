@@ -2,23 +2,23 @@ const Button = {
   variants: {
     primary: {
       borderRadius: 0,
-      bg: 'primary.400',
+      bg: 'primary.600',
       color: 'white',
       _hover: {
-        bg: 'primary.500',
+        bg: 'primary.700',
         color: 'white',
       },
     },
     secondary: {
       borderRadius: 0,
       border: '2px',
-      borderColor: 'primary.400',
-      color: 'primary.400',
+      borderColor: 'primary.600',
+      color: 'primary.600',
       _hover: {
-        bg: 'primary.500',
+        bg: 'primary.700',
         color: 'white',
         borders: '0px',
-        borderColor: 'primary.500',
+        borderColor: 'primary.700',
       },
     },
   },

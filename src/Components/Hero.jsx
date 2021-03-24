@@ -13,7 +13,7 @@ const Hero = () => {
       mb={{ base: 0, md: '8rem' }}
       justifyContent='space-between'
     >
-      <Stack spacing={4} w={['xs', 'md']} pt={[0, '6']} mb={['6', 0]}>
+      <Stack spacing={4} w={['xs', 'md']} pt={[0, '12']} mb={['6', 0]}>
         <Heading
           size={'lg'}
           mb='0.4rem'

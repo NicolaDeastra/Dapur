@@ -37,21 +37,19 @@ const RecipeGrid = ({ recipes, title = 'Resep' }) => {
         ) : null}
       </Flex>
       <SimpleGrid columns={[1, 3]} spacing='3'>
-        {recipes
-          ? recipes.map((recipe, index) => (
-              <Card
-                key={index}
-                title={recipe.title}
-                thumb={recipe.thumb}
-                times={recipe.times}
-                portion={recipe.portion}
-                dificulty={recipe.dificulty}
-                tags={recipe.tags}
-                category={recipe.category}
-                endpoint={recipe.key}
-              />
-            ))
-          : null}
+        {recipes?.map((recipe, index) => (
+          <Card
+            key={index}
+            title={recipe.title}
+            thumb={recipe.thumb}
+            times={recipe.times}
+            portion={recipe.portion}
+            dificulty={recipe.dificulty}
+            tags={recipe.tags}
+            category={recipe.category}
+            endpoint={recipe.key}
+          />
+        ))}
       </SimpleGrid>
     </Stack>
   )
